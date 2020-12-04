@@ -10,3 +10,6 @@ script = ExtResource( 2 )
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.0131214, 0 )
 mesh = ExtResource( 1 )
 material/0 = null
+
+[node name="Camera" type="Camera" parent="."]
+transform = Transform( -1, 0, -3.25841e-07, 0, 1, 0, 3.25841e-07, 0, -1, 0, 0.0325381, -0.122989 )
