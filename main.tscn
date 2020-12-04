@@ -23,7 +23,7 @@ metallic = 1.0
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.502445, 0 )
 
 [node name="sun" type="DirectionalLight" parent="."]
-transform = Transform( 1, 0, 0, 0, 0.979491, 0.201488, 0, -0.201488, 0.979491, 0, 1.37825, 0.78892 )
+transform = Transform( -1.62921e-07, -0.201488, 0.979491, 0, 0.979491, 0.201488, -1, 3.28266e-08, -1.59579e-07, 0, 1.37825, 0.78892 )
 light_color = Color( 1, 0.470588, 0, 1 )
 light_energy = 5.06
 light_specular = 1.0
