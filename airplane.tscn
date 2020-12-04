@@ -1,7 +1,17 @@
-[gd_scene load_steps=3 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://airplane/airplane.obj" type="ArrayMesh" id=1]
 [ext_resource path="res://airplane.gd" type="Script" id=2]
+[ext_resource path="res://airplane/normal.png" type="Texture" id=3]
+[ext_resource path="res://airplane/diffuse.jpg" type="Texture" id=4]
+
+[sub_resource type="SpatialMaterial" id=1]
+albedo_texture = ExtResource( 4 )
+metallic = 1.0
+roughness = 0.47
+normal_enabled = true
+normal_scale = 1.0
+normal_texture = ExtResource( 3 )
 
 [node name="airplane" type="Spatial"]
 script = ExtResource( 2 )
@@ -9,7 +19,9 @@ script = ExtResource( 2 )
 [node name="mesh" type="MeshInstance" parent="."]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.0131214, 0 )
 mesh = ExtResource( 1 )
-material/0 = null
+skeleton = NodePath("")
+material/0 = SubResource( 1 )
 
 [node name="camera" type="Camera" parent="."]
 transform = Transform( -1, 0, -3.25841e-07, 0, 1, 0, 3.25841e-07, 0, -1, 0, 0.0325381, -0.122989 )
+fov = 89.9
