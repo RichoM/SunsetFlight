@@ -1,23 +1,20 @@
 extends Spatial
 
+var mesh
 
-# Declare member variables here. Examples:
-# var a = 2
-# var b = "text"
-var angle = 1
+var min_angle = deg2rad(-45)
+var max_angle = deg2rad(45)
 
-
-# Called when the node enters the scene tree for the first time.
 func _ready():
-	pass # Replace with function body.
+	mesh = $MeshInstance
 
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
-	#print(rotation)
-	if rotation.z <= -1:
-		angle = -1
-	elif rotation.z >= 1:
-		angle = 1
-	
-	rotate(Vector3.FORWARD, angle * delta)
+	print(mesh.rotation.z)
+	if Input.is_action_pressed("ui_left"):
+		rotation.y += delta
+		mesh.rotation.z -= delta
+		if mesh.rotation.z < min_angle: mesh.rotation.z = min_angle
+	elif Input.is_action_pressed("ui_right"):
+		rotation.y -= delta
+		mesh.rotation.z += delta
+		if mesh.rotation.z > max_angle: mesh.rotation.z = max_angle
