@@ -4,10 +4,10 @@ var mesh
 
 var min_angle = deg2rad(-35)
 var max_angle = deg2rad(35)
-var target_angle = 0
+export var target_angle = 0
 
 func _ready():
-	mesh = $MeshInstance
+	mesh = $mesh
 
 func _process(delta):
 	mesh.rotation.z = lerp_angle(mesh.rotation.z, target_angle, 2.5 * delta)
