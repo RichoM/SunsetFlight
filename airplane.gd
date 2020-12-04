@@ -14,7 +14,7 @@ func _ready():
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
-	print(rotation)
+	#print(rotation)
 	if rotation.z <= -1:
 		angle = -1
 	elif rotation.z >= 1:
