@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/Full Moon.ogg-fc98b1dd44785e210bf2510343de301b.oggstr"
+
+[deps]
+
+source_file="res://music/Full Moon.ogg"
+dest_files=[ "res://.import/Full Moon.ogg-fc98b1dd44785e210bf2510343de301b.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0
