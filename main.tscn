@@ -7,9 +7,8 @@
 [sub_resource type="PlaneMesh" id=1]
 
 [sub_resource type="SpatialMaterial" id=2]
-flags_transparent = true
 params_blend_mode = 1
-albedo_color = Color( 0, 0.858824, 1, 1 )
+albedo_color = Color( 0, 0.184314, 1, 1 )
 metallic = 1.0
 
 [node name="Main" type="Spatial"]
