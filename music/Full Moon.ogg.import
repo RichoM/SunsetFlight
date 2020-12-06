@@ -11,5 +11,5 @@ dest_files=[ "res://.import/Full Moon.ogg-fc98b1dd44785e210bf2510343de301b.oggst
 
 [params]
 
-loop=true
+loop=false
 loop_offset=0
