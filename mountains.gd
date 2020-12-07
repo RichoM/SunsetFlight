@@ -1,8 +1,8 @@
 extends Spatial
 
-const max_chunks_per_frame = 2
+const max_chunks_per_frame = 1
 const max_chunks_total = 16
-const chunk_size = 64
+const chunk_size = 32
 var chunk_amount = 4
 
 var noise
@@ -11,9 +11,9 @@ var unready_chunks = {}
 export(NodePath) var airplane
 
 func _ready():
-	randomize()
+	#randomize()
 	noise = OpenSimplexNoise.new()
-	noise.seed = randi()
+	noise.seed = 1
 	noise.octaves = 6
 	noise.period = 80
 	
