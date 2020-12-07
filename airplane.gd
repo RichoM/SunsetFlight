@@ -1,6 +1,6 @@
 extends Spatial
 
-export var speed = 2.5
+export var speed = 5
 
 var mesh
 
