@@ -20,8 +20,8 @@ func _ready():
 func generate_chunk():
 	var plane_mesh = PlaneMesh.new()
 	plane_mesh.size = Vector2(chunk_size, chunk_size)
-	plane_mesh.subdivide_depth = chunk_size * 0.15
-	plane_mesh.subdivide_width = chunk_size * 0.15
+	plane_mesh.subdivide_depth = chunk_size * 0.2
+	plane_mesh.subdivide_width = chunk_size * 0.2
 	
 	var surface_tool = SurfaceTool.new()
 	var data_tool = MeshDataTool.new()
@@ -46,5 +46,6 @@ func generate_chunk():
 	mesh_instance.mesh = surface_tool.commit()
 	mesh_instance.create_trimesh_collision()
 	mesh_instance.cast_shadow = GeometryInstance.SHADOW_CASTING_SETTING_OFF
-	mesh_instance.set_surface_material(0, load("res://terrain.material"))
+	#mesh_instance.set_surface_material(0, load("res://terrain.material"))
+	mesh_instance.set_surface_material(0, load("res://terrain2.tres"))
 	add_child(mesh_instance)
