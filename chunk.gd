@@ -40,12 +40,12 @@ func generate_chunk():
 	data_tool.commit_to_surface(array_plane)
 	surface_tool.begin(Mesh.PRIMITIVE_TRIANGLES)
 	surface_tool.create_from(array_plane, 0)
-	surface_tool.generate_normals()
+	#surface_tool.generate_normals()
 	
 	mesh_instance = MeshInstance.new()
 	mesh_instance.mesh = surface_tool.commit()
-	mesh_instance.create_trimesh_collision()
-	mesh_instance.cast_shadow = GeometryInstance.SHADOW_CASTING_SETTING_OFF
+	#mesh_instance.create_trimesh_collision()
+	#mesh_instance.cast_shadow = GeometryInstance.SHADOW_CASTING_SETTING_OFF
 	#mesh_instance.set_surface_material(0, load("res://terrain.material"))
 	mesh_instance.set_surface_material(0, load("res://terrain2.tres"))
 	add_child(mesh_instance)
