@@ -6,11 +6,12 @@
 [ext_resource path="res://rocks_ground_06/rocks_ground_06_diff_1k.jpg" type="Texture" id=4]
 
 [resource]
+flags_albedo_tex_force_srgb = true
 albedo_texture = ExtResource( 4 )
-metallic = 1.0
-metallic_specular = 1.0
+metallic = 0.68
+metallic_specular = 0.0
 roughness_texture = ExtResource( 2 )
-roughness_texture_channel = 3
+roughness_texture_channel = 4
 normal_enabled = true
 normal_scale = 1.0
 normal_texture = ExtResource( 1 )
@@ -18,7 +19,7 @@ rim_enabled = true
 rim = 1.0
 rim_tint = 0.5
 ao_enabled = true
-ao_light_affect = 0.56
+ao_light_affect = 1.0
 ao_texture = ExtResource( 3 )
 ao_on_uv2 = false
-ao_texture_channel = 4
+ao_texture_channel = 3
